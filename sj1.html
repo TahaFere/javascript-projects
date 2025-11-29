@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <title>kodluyoruz ile kod yazmecec</title>
+
+        <!-- <style>
+    .text-primary {
+        color: blue;
+    }
+                                        CTRL+K+C AÇIKALAM SATIRI YAPMA KISA YOLU
+    .text-danger {
+        color: red;
+    }
+</style> -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous">
+    </head>
+
+    <body>
+
+        <div id="alert"></div>
+
+        <h1 id="greeting">HOŞ GELDİN</h1>
+        <hr>
+        <h3 id="app">merhaba dünya</h3>
+        <h2 id="title">merhaba dünya</h2>
+        <h2 id="info">info</h2>
+        <ul id="list">
+            <li>
+                <a href="#" id="deneme_link">link</a>
+            </li>
+        </ul>
+
+        <hr>
+
+        <ul id="list1">
+            <li>Lorem.</li>
+            <li>Fugit?</li>
+            <li>Soluta.</li>
+        </ul>
+        <hr>
+        <h3 id="counter">100</h3>
+        <button id="increase">ARTTIR</button>
+        <button id="decrease">AZALT</button>
+        <hr>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm8 offset-sm2">
+                    <form id="userForm">
+                        <div class="mb-3">
+                            <label class="form-label"  for="username">KULLANICI ADi:</label>
+                            <input class="form-control" type="text" name="username" id="username"><!-- name özzelliği olmazsa get ile ilgili işlemler gönderilmez. -->
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="score">NOT BİLGİSİ:</label>
+                            <input class="form-control" type="number" name="score" id="score"><!-- name özzelliği olmazsa get ile ilgili işlemler gönderilmez. -->
+                        </div>
+                        <button type="reset"
+                            class="btn btn-danger">sıfırla</button>
+                        <button type="submit"
+                            class="btn btn-success">gonder..</button>
+                    </form>
+                </div>
+            <div class="col-sm-8 offset-sm-2 mt-4">
+                <ul class="list-group" id="userList">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <!-- cras justify
+                        <span class="badge bg-primary rounded-pill">14</span> -->
+                    </li>
+                  </ul>
+            </div>
+            </div>
+        </div>
+
+<div>
+<ul class="list-group" id="userList1">
+
+</ul>
+</div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+        <!--<script src="jsDersleri/js01.js">// değişken tanımlama var,let,const</script>-->
+        <!--<script src="jsDersleri/js02.js">// değişken tanıma kuralları</script>-->
+        <!--<script src="jsDersleri/js03.js">// number veri turu kullanımı,temel aritmetik işlemler ve işlem önceliği</script>-->
+        <!--<script src="jsDersleri/js04.js">// boolen veri türü ile çalışma</script>-->
+        <!--<script src="jsDersleri/js05.js">// değişken türünü kontrol etmke ve değişken türünü değiştirmek</script>-->
+        <!--<script src="jsDersleri/js06.js">// template literals kullanımı</script>-->
+        <!--<script src="jsDersleri/js07.js">// string veri türleri</script>-->
+        <!--<script src="jsDersleri/js08.js">// document objet model (DOM)</script>-->
+        <!--<script src="jsDersleri/js09.js">// DOM içersinden etiket ve ID öğe seçimi</script>-->
+        <!--<script src="jsDersleri/js10.js">// promt ile kullanıcıdan bilgi almak</script>-->
+        <!--<script src="jsDersleri/js11.js">// liste içindeki ogeye ulaşmak ve eni öğe eklemek</script>-->
+        <!--<script src="jsDersleri/js12.js">// DOM'a CSS class bilgisi eklemek veya çıkarmak</script>-->
+        <!--<script src="jsDersleri/js13.js">// Karşılaştırma operatörleri ve mantıksal operatörler</script>-->
+        <!--<script src="jsDersleri/js14.js">// koşul yapısı kullanımı (if/else)</script>-->
+        <!--<script src="jsDersleri/js15.js">// çoklu koşul yapısı kullanımı (if/else)</script>-->
+        <!--<script src="jsDersleri/js16.js">// ternary operator(koşul? doğruysa: yanlışsa) ile if kullanımı</script>-->
+        <!--<script src="jsDersleri/js17.js">// koşullarla çalışmak</script>-->
+        <!--<script src="jsDersleri/js18.js">// fonksiyon nedir ve neden kullanırız </script>-->
+        <!--<script src="jsDersleri/js19.js">// fonksiyona parametre(params) ve geri dönüş return ekleme </script>-->
+        <!--<script src="jsDersleri/js20.js">// fat arrow fonksiyou kullanımı </script>-->
+        <!--<script src="jsDersleri/js21.js">// DOM etiketleriyle çalışmak </script>-->
+        <!--<script src="jsDersleri/js22.js">// bölüm sonu egzersizi </script>-->
+        <!--<script src="jsDersleri/js23.js">// localStorage ile veri eklemek, düzenlemek ve silmek </script>-->
+        <!--<script src="jsDersleri/js24.js">// localStorage içerisine farklı türde veri eklemek </script>-->
+        <!--<script src="jsDersleri/js25.js">// form ve form submit yönetimi </script> -->
+        <!--<script src="jsDersleri/js26.js">// input içerisinden değer almak </script> -->
+        <!--<script src="jsDersleri/js27.js">// formlarla çalışma </script> -->
+        <!--<script src="jsDersleri/js28.js">// dizi(array)oluşturmak ve dizi içindeki elemanlara ulaşmak </script> -->
+        <!--<script src="jsDersleri/js29.js">// diziye yeni eleman eklemek, çıkartmak ve güncellemek </script> -->
+        <!--<script src="jsDersleri/js30.js">// Array(dizi methotlarının kullanımı ve array içinde array oluşturma </script> -->
+        <!--<script src="jsDersleri/js31.js">// for döngüsü kullanımı </script> -->
+        <!-- <script src="jsDersleri/js32.js">// break ve continue kullanımı </script> -->
+         <!-- <script src="jsDersleri/js33.js">// while döngüsü </script> -->
+         <!-- <script src="jsDersleri/js34.js">// forEach ile Array içerisindeki öğelerin çağrılması </script> -->
+         <!-- <script src="jsDersleri/js35.js">// filter ile array içerisinde sadece istenilen bilgirin yeni listeye eklenmesi </script> -->
+         <!-- <script src="jsDersleri/js36.js">// map ile array içerisindeki yapının değiştirilerek yeni liste oluşturulması </script> -->
+         <!-- <script src="jsDersleri/js37.js">// object(nesne)nedir nasıl oluşturulur </script> -->
+         <!-- <script src="jsDersleri/js38.js">// object anahtar(key) ve değer(value) yapısının kullanımı/erişimi </script> -->
+         <!-- <script src="jsDersleri/js39.js">// nesnelere nasıl metot ekleriz </script> -->
+         <!-- <script src="jsDersleri/js40.js">// object ve array destructuring kullanımı </script> -->
+         <!-- <script src="jsDersleri/js41.js">// try ve catch kullanımı </script> -->
+          <script src="jsDersleri/js42.js">// fetch Api ile çalışmak </script>
+
+
+
+    </body>
+
+</html>

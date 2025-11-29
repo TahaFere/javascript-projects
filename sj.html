@@ -1,0 +1,406 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function Ders(isim, kod, hoca, tarih) { //sınıf tanıttık
+            this.isim = isim;
+            this.kod = kod;
+            this.hoca = hoca;
+            this.tarih = tarih;
+            this.kacsenedir = kacsenedir;
+        }
+
+        function kacsenedir() {
+            var x = 2025 - this.tarih;
+            return x;
+        }
+    </script>
+</head>
+
+<body onload="sayfaYüklemeMesajı();" onunload="sayfaKapatmaMesajı();" onscroll="scrollUygulamassı();">
+    <script type="text/javascript">
+        function sayfaYüklemeMesajı(){
+            alert("1.sayfamıza hoş geldiniz.onload sayfa yüklenirken olmasını istediğimiz şeyleri yazıyoruz her tarayıcı da çalışmıyor");
+        }
+        function sayfaKapatmaMesajı(){
+            alert("2.güle güle.onunload sayfa kapanırken olmasını istediğimiz şeyleri yazıyoruz");
+        }
+        function scrollUygulamassı(){
+            //alert("aşağılarda daha derin bilgi vardır. sayfayı kaydırdığınızda mesaj çıkarıtr");
+        }
+        satır = "<br>"
+        çizgi = " <br> <hr/> ";
+        document.write("BAŞLANGIÇ " + satır);
+        document.write("Taha FERE HV.SVN.ASB.ÇVŞ " + satır);
+        var x = 10;
+        document.write(x + "x " + satır);
+        var yas = 1; // açıklama satırı 
+        var yıl = 5;
+        document.write("TAHA FERE " + yas + " yasında " + yıl + " sonra " + (yıl + yas) + " yasında olucak " + satır);
+        /* geniş açıklama satırı */
+        document.write(çizgi);
+
+        function yas1(x) {
+            document.write("merhaba kullanıcı benim yaşım" + x + satır);
+        }
+        yas1(25);
+
+        function kimlik(ad, soyad) {
+            document.write(" <b> merhaba benim adım: " + ad + " </b><em> soyadım: " + soyad + "</em > " + satır);
+        }
+        kimlik("Taha ", "Fere ");
+        kimlik("Fatmanur ", "Tilaver ");
+        kimlik("yasin ", "Fere ")
+        document.write(çizgi);
+
+        function deneme1(x) {
+            return x * x;
+        }
+        alert("3."+deneme1(2));
+        document.write(deneme1(5) +
+            satır);
+
+        function deneme2(y) {
+            alert("4."+y * y * y);
+        }
+        deneme2(deneme1(3));
+        document.write(çizgi);
+        var a = 1;
+
+        function birinci() {
+            document.write(" birinci fonksiyon" + a + "defa çalıştırıyorum...!");
+            a = a + 1;
+            ikinci()
+        }
+
+        function ikinci() {
+            document.write(" ikinci fonksiyon çalıştırıyorum...!")
+            birinci()
+        }
+
+        function nihai() {
+            birinci();
+            ikinci();
+        } //birinci(); 
+        //nihai() 
+        document.write("burada iç içe fonksiyonlar yazıldığı için sonsuz döngü oluşturulmuştur....")
+        document.write(çizgi);
+        var a = 5;
+        a = a + 1; //toplama(+), çıkarma(-), çıkarma( * ), bölme(/)ondalıklı bölüm ,mod(%)bölümdenkalanı verir 
+        a++;
+        a--;
+        var y = 10;
+        y += 3; //toplama(+=),çıkarma( -= ), çıkarma( *= ), bölme(/=) 
+        document.writeln("merhaba aradığınız sayı " + a + satır);
+        document.writeln("merhaba aradığınız sayı " + y + satır);
+        document.write(çizgi);
+
+        function deneme() {
+            alert("5.MERHABA YAKALANDIN");
+        }
+        var isim = "taha";
+        if (isim == "taha") //çift = operotörü eşit ise demek ama != operotörü ise eşit değil ise anlamı vardır 
+        {
+            document.write("sizin adınız Taha...!" + satır);
+        } else {
+            document.write("sizin adınız Taha değil...!" + satır);
+        }
+        var ilksayi = 5;
+        var ikincisayi = 3;
+        if (ilksayi <
+            ikincisayi) //<=k üçükeşittir,>= büyükeşittir opertörleri vardırn 
+        {
+            document.write("ikinci sayi daha büyük" + satır);
+        } else {
+            document.write("ilk sayi daha büyük" + satır);
+        }
+        var ad = "taha";
+        var soyadı = "fere";
+        if (ad == "taha") {
+            if (soyadı == "fere") {
+                document.write("EVET!aradağımız adamı bulduk..." + satır);
+            } else {
+                document.write("isim tuttu ama soyadı yanlış " + satır);
+            }
+        } else {
+            document.write("isim yanlış, soyadına bakmadım bile " + satır);
+        }
+        if (ad == "taha " && soyadı == "fere ") {
+            document.write("EVET!aradağımız adamı bulduk..." + satır);
+        } else {
+            if (ad == "taha " || soyadı == "fere ") {
+                document.write("isim yada soyadı doğru " + satır);
+            } else {
+                document.write("ne isim ne soyadı doğru " + satır);
+            }
+        }
+        document.write(çizgi);
+        var ders = "javaScript ";
+        //var ders ="XHTML";
+        switch (ders) {
+            case "javaScript":
+                {
+                    document.write("yeni javascript dersi eklendi " + "<a href='https://animecix.tv'>buradan</a> ulaşabilirsiniz" + satır);
+                    break;
+                }
+            case "XHTML":
+                {
+                    document.write("yeni XHTML dersimiz eklendi " + " <a href='https://animecix.tv' > buradan < /a> ulaşabilirsiniz" + satır);
+                    break;
+                }
+            default:
+                {
+                    document.write("aradığınız ders bulunumadı" + "<a href='https:animecix.tv '>buradan</a> ulaşabilirsiniz" + satır);
+                }
+        }
+        document.write(çizgi);
+        var c = 10;
+        while (c < 20) {
+            document.write("suanki c değeri: " + c + "<br/>");
+            c = c + 1;
+        }
+        for (var y = 10; y < 20; y++) {
+            document.write("suanki y değeri: " + y + "<br/>");
+        }
+        var z = 10;
+        do {
+            document.write("suan z değeri: " + z + "<br/>");
+            z++;
+        } while (z < 20);
+        document.write(çizgi);
+        var ders1 = new Ders("javaScript", 101, "Taha", 2016); //sınıfdan oluşturulmuş nesne
+        var ders2 = new Ders("HTML", 121, "Fatmanur", 2023); //sınıfdan oluşturulmuş nesne
+        document.write(ders1.hoca + satır);
+        document.write(ders1.tarih + satır);
+        document.write(ders1.kod + satır);
+        document.write(ders2.hoca + satır);
+        document.write(ders2.tarih + satır);
+        document.write(ders2.kod + satır);
+        var ulke1 = { //bir obje yarattık bu objeyi sadece böyle kullanabiliriz
+            isim: "almanya",
+            dil: "almanca",
+            konum: "AB",
+            kurulusYılı: 1871
+        };
+        var ulke2 = { //aynı olay için objeyi yeniden yazıp oluşturduk
+            isim: "ingiltere",
+            dil: "ingilizce",
+            konum: "AB",
+            kurulusYılı: 1865
+        };
+        document.write(ulke1.konum + satır);
+        document.write(ulke1.dil + satır);
+        document.write(ulke2.kurulusYılı + satır);
+        document.write(ulke2.dil + satır);
+        document.write(ders1.kacsenedir() + satır);
+        document.write(ders2.kacsenedir() + satır);
+        document.write(çizgi);
+        var derslistesi = new Array("XHTML", "JAVA", "JS", "AUTOCAD", "HTML5");
+        document.write(derslistesi[1] + satır);
+        document.write(derslistesi[0] + satır);
+        document.write(derslistesi[3] + satır);
+        var ulkelistesi = new Array();
+        ulkelistesi[0] = "almanya";
+        ulkelistesi[1] = "fransa";
+        ulkelistesi[2] = "ingiltere";
+        ulkelistesi[3] = "TÜRKİYE";
+        ulkelistesi[10] = "belçika";
+        document.write(ulkelistesi[1] + satır);
+        document.write(ulkelistesi[3] + satır);
+        document.write(ulkelistesi[0] + satır);
+        document.write(çizgi);
+        var uzunluk1 = derslistesi.length;
+        var uzunluk2 = ulkelistesi.length;
+        document.write(uzunluk1 + satır);
+        document.write(uzunluk2 + satır);
+        for (let i = 0; i < ulkelistesi.length; i++) {
+            document.write(ulkelistesi[i] + "   ");
+        }
+        document.write(satır);
+        for (let i = 0; i < derslistesi.length; i++) {
+            document.write(derslistesi[i] + "   ");
+        }
+        document.write(çizgi);
+        var mevcutDersler = new Array("XHTML", "JS")
+        var verilecekDersler = new Array("HTML", "MYSQL")
+        for (var i = 0; i < mevcutDersler.length; i++) {
+            document.write("0."+mevcutDersler[i] + "   ");
+        }
+        document.write(satır);
+        for (var j = 0; j < verilecekDersler.length; j++) {
+            document.write("1."+mevcutDersler[j] + "   ");
+        }
+        document.write("2."+derslistesi.join()+satır);//join() fonksiyonu listede ki bütün elemanları araya "," koyarak listeler
+        document.write("3."+verilecekDersler.join()+satır);
+        var dersler= new Array();
+        dersler[0]=mevcutDersler[0];
+        dersler[1]=mevcutDersler[1];
+        dersler[2]=verilecekDersler[0];
+        dersler[3]=verilecekDersler[1];
+        document.write("4."+dersler.join()+satır);
+        document.write("5."+verilecekDersler.concat(mevcutDersler).join()+satır);// concat() fonksiyonu iki listeyi birleştirmeye yarar
+        var tersliste=new Array();
+        tersliste[0]=dersler[3];
+        tersliste[1]=dersler[2];
+        tersliste[2]=dersler[1];
+        tersliste[3]=dersler[0];
+        document.write("6."+tersliste.join()+satır);
+        document.write("7."+dersler.reverse().join()+satır);//array listesini ders çevirdi
+        var derslerSirali= dersler.sort();// sort() methodu sıralama yaptı büyükten küçüğe
+        document.write("8."+derslerSirali.join()+satır);
+        derslerSirali.pop();// sondaki elemanı sildi
+        document.writeln("9."+derslerSirali.join()+satır);
+        derslerSirali.push("autocad","rhino");
+        document.write("10."+derslerSirali.join()+satır);
+        document.write(çizgi);
+        var liste=new Array();
+        for(var i=0;i<=5;i++){
+        var c= prompt("lütfen "+i+ ".değeri giriniz:");
+        liste[i]=c;
+    }
+        document.write(liste.join());
+        document.write(çizgi);
+        var liste1=new Array();
+        liste1[0]=Math.round(2.75);
+        liste1[1]=Math.round(2.24);
+        liste1[2]=Math.floor(3.56);
+        liste1[3]=Math.PI;
+        liste1[4]=Math.E;
+        liste1[5]=Math.sqrt(134);
+        liste1[6]=Math.random();//0 ile 1 arasında rastgele rakam döndür
+        liste1[7]=Math.max(12,4,34,1235,67,35,3,54,6,8);
+        liste1[8]=Math.min(23,6,64,867,3457,34,12,5);
+        for( var i=0; i<liste1.length;i++){
+            document.write(liste1[i]+satır);
+        }
+        document.write(çizgi);
+        var zaman= new Date();
+        document.write("1."+zaman+satır);
+        var saat=zaman.getHours();// veri almak için kullanılır
+        document.write("2."+saat+satır);
+        var dakika=zaman.getMinutes();
+        document.write("3."+dakika+satır);
+        var zamanDegistirilmis=new Date(2035,6,3,12,45,0,0)
+        document.write("4."+zamanDegistirilmis+satır);
+        zaman.setHours(23)// veri göndermek için kullanılır
+        document.write("5."+zaman+satır);
+
+        function yasKontrol(){
+            var dogumYili=prompt("lütfen doğum yılınızı yazınız:")
+            var mevcutZaman=new Date();
+            var sinirYil=mevcutZaman.getFullYear()-18;
+            if(dogumYili>sinirYil){
+                alert("6.ne yazıkki yaşınız yetmiyor büyüyün tekrar gelin.....");
+            }
+            else{
+                alert("7.HOŞGELDİN GRAL... RAHAT RAHAT GEZİN");
+            }
+        }
+        yasKontrol();
+        document.write(çizgi);
+        var saniye1=3595;
+        function kronometre(){
+            var dak=Math.floor(saniye1/60);
+            var sa=Math.floor(saniye1/3600);
+            var dakika1=dak%60;
+            var san=saniye1%60;
+
+            document.write(sa+" : "+dakika1+" : "+san+satır);
+            saniye1++;
+        }
+        kronometre();
+        //setInterval("kronometre()",1000)//1sn yede sürekli fonksiyon çağırıyor
+        document.write(çizgi);
+        function karakök(){
+            var x =prompt("lütfen karakökünü bulmasını istediğiniz sayıyı aşağı giriniz ","değeri buraya giriniz");
+            var y =Math.sqrt(x);
+            alert("8."+x+" sayısının karakökü: "+y);
+        }
+
+
+
+
+
+    </script>
+    <form name="birinci">
+        <input type="button" value="BAS!!" onclick="deneme();"/> 
+        <input type="button" value="DÜĞME" onclick="alert('9.düğmeye bastınız');alert('10.açılan ekranı gördünüz');"/>
+        <input type="button" value="karakök bulucu!!" onclick="karakök();"/><br>
+        <a href="https://www.dr.com.tr/kataloglar_/super-firsatlar/9564?SortOrder=1&SortType=0&Page=1" 
+        onmouseover="alert('11.doğru siteyi buldunuz')">D&R indirimleri</a><br>
+        <a href="https://www.dr.com.tr/kataloglar_/super-firsatlar/" 
+        onmouseout="alert('12.indirimleri kaçırmayın')">D&R indirimleri kaçırma</a><br>
+        <img src="tik.jpg" height="240px" width="240px" onmouseout="alert('13.doğru alandan uzaklaşıyorsunuz');"/><br>
+        <img src="no.png" onmouseover="alert('14.yanlış alana giriyorsunuz');"/><br>
+        <input type="text" name="text1">
+
+    </form>
+    <hr>
+    <form name="ikinci">
+        <fieldset><legend>kullanıcı girişi</legend>
+        kullanici:<input type="text" name="kullaniciAdi"/><br>
+        şifre:<input type="password" name="kullaniciSifre"/><br>
+        <input type="button" value="Gönder"/>
+    </fieldset>
+    </form>
+    <form name="ucuncu">
+    <fieldset><legend>anket alanı</legend>
+        NEREDE OTUYORSUN?*<br>
+        <input type="radio" name="adress" value="TR">TÜRKİYE<br>
+        <input type="radio" name="adress" value="AB">Avrupa Birliği<br>
+        <input type="radio" name="adress" value="ABD">ABD<br>
+        <input type="radio" name="adress" value="DİĞER">DİĞER<br>
+        <input type="button" value="Gönder"/>
+    </fieldset>
+    </form>
+    <form name="dortuncu">
+    <fieldset><legend>seçim alanı</legend>
+        seçmeden geçme?*<br>
+        <input type="checkbox" name="adress" value="TR">TÜRKİYE<br>
+        <input type="checkbox" name="adress" value="AB">Avrupa Birliği<br>
+        <input type="checkbox" name="adress" value="ABD">ABD<br>
+        <input type="checkbox" name="adress" value="DİĞER">DİĞER<br>
+        <input type="checkbox" name="adress" value="TR1">TÜRKİYE1<br>
+        <input type="checkbox" name="adress" value="AB1">Avrupa Birliği1<br>
+        <input type="checkbox" name="adress" value="ABD1">ABD1<br>
+        <input type="checkbox" name="adress" value="DİĞER1">DİĞER1<br>
+        
+    </fieldset>
+    </form>
+    <input type="button" value="kontrol" onclick="alert('23.'+document.dortuncu.elements[2].checked);"/>
+
+    <script>
+        var forms1=document.forms[0].length;//formdan önce tanıtıldığı zaman veri alınmıyor çünkü kodlar yukarıdan aşağı doğru taranıp basılıyor
+        alert("15."+forms1+"adet form nesnesi var");//forms[0] olayı ise ilk form olmasından dolayı yada forma id vermediğimizden dolayıdır.
+        var forms2=document.forms[0].elements[0].value;
+        alert("16."+forms2)
+        var forms3=document.forms[0].elements[2].value;
+        alert("17."+forms3)
+        var forms4=document.forms[1].length;//ikinci isimli formun içindeki fieldset etiketli gruplama yapan etiketde form nesnesi sayılıyor
+        alert("19."+forms4)
+        var forms5=document.forms[1].elements[3].type;
+        alert("18."+forms5)
+        var forms6=document.forms[2].length;//ikinci isimli formun içindeki fieldset etiketli gruplama yapan etiketde form nesnesi sayılıyor
+        alert("20."+forms6)
+        var forms6=document.forms[2].elements[4].value;//ucuncu isimli formun içinden alıyoruz
+        alert("21."+forms6)
+        var forms7=document.ucuncu.elements[4].value;//ucuncu isimli formun içinden alıyoruz
+        alert("22."+forms7)
+
+        function checker(){
+            var uzunluk=document.dortuncu.length;
+            var kontlist=new Array();
+            for (var i=0;i<uzunluk;i++){
+                if(document.dortuncu.elements[i].checked==true){
+                    kontlist.push(document.dortuncu.elements[i].value);
+                }
+            }
+            alert("24. Ekran seçili ülkeler şunlardır"+kontlist.join());
+        }
+
+    </script>
+        <input type="button" value="full kontrol" onclick="checker();"/>
+
+</body>
+
+</html>
